@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BasicRestController {
 
-    @RequestMapping(name = "hellowWorld", value = "/hello")
-    public String helloWorld() {
+    @RequestMapping(value = "/hello")
+    public String helloWorldMethod() {
         return "hello world!";
     }
 
-    @RequestMapping(name = "repeat", value = "/repeat")
-    public String repeat(@RequestParam(name = "text") String text) {
+    @RequestMapping(value = "/repeat")
+    public String repeatMethod(@RequestParam(name = "text") String text) {
         return "I am saying the following: " + text;
     }
 
-    @RequestMapping(name = "searchViaPathParam", value = "/repeat/{number}")
-    public String searchViaPathParam(@PathVariable(value = "number") int number) {
+    @RequestMapping(value = "/repeat/{number}")
+    public String searchViaPathParamMethod(@PathVariable(value = "number") int number) {
         return "the following was in the pathParam: " + number;
     }
 
