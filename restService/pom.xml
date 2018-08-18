@@ -8,6 +8,7 @@
     <artifactId>restService</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--Specifies the parent and where to pull dependencies from-->
     <parent>
         <groupId>marco</groupId>
         <artifactId>restpaymentservice_example</artifactId>

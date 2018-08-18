@@ -6,17 +6,21 @@
 
     <groupId>marco</groupId>
     <artifactId>restpaymentservice_example</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version> <!-- This is the version of your project (lies in .m2 dir) -->
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- The Following specifies that you want to use java 8 to compile code -->
         <maven.compiler.source>1.8</maven.compiler.source>
+        <!-- The Following specifies that you want to use java 8 to compile code -->
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <!--dpenedencyManagement says that if i were to pull in the below dependency these version will then be provided -->
     <dependencyManagement>
         <dependencies>
+            <!-- Specify that i want to use spring code (mainly for restTemplate and dependencies)-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -27,6 +31,8 @@
                 <artifactId>spring-boot-starter</artifactId>
                 <version>2.0.4.RELEASE</version>
             </dependency>
+
+            <!--Using gson to convert code from json to object and back to json-->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
@@ -36,6 +42,7 @@
     </dependencyManagement>
 
 
+    <!--Below states the order of the modules that will be build if this main pom is build -->
     <modules>
         <module>restService</module>
         <module>gui</module>
