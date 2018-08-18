@@ -23,7 +23,7 @@ public class RestService {
 
         HttpEntity<String> request = new HttpEntity(new String("randomJunk"));
 
-        ResponseEntity<String> exchange = restTemplate.exchange("http://localhost:1010/hello", HttpMethod.GET, request, String.class);
+        ResponseEntity<String> exchange = restTemplate.exchange("http://localhost:8080/hello", HttpMethod.GET, request, String.class);
 
 
         JOptionPane.showMessageDialog(null, exchange.getBody());
@@ -35,7 +35,7 @@ public class RestService {
 
         HttpEntity<String> request = new HttpEntity<>(word);
 
-        String url = "http://localhost:1010/repeat?text=" + word;
+        String url = "http://localhost:8080/repeat?text=" + word;
         ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
 
 
@@ -48,7 +48,7 @@ public class RestService {
 
         HttpEntity<String> request = new HttpEntity<>("");
 
-        String url = "http://localhost:1010/login?username=" + username + "&password=" + password;
+        String url = "http://localhost:8080/login?username=" + username + "&password=" + password;
         ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
 
 
@@ -67,7 +67,7 @@ public class RestService {
 
         HttpEntity<String> entity = new HttpEntity<>(headerValue, httpHeaders);
 
-        String url = "http://localhost:1010/loginUserDetails";
+        String url = "http://localhost:8080/loginUserDetails";
         ResponseEntity<Response> exchange = restTemplate.exchange(url, HttpMethod.GET, entity, Response.class);
 
 
