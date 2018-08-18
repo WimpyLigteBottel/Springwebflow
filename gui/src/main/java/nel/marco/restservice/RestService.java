@@ -7,6 +7,8 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import javax.swing.*;
+
 @Component
 public class RestService {
 
@@ -24,7 +26,7 @@ public class RestService {
         ResponseEntity<String> exchange = restTemplate.exchange("http://localhost:1010/hello", HttpMethod.GET, request, String.class);
 
 
-        System.out.println(exchange.getBody());
+        JOptionPane.showMessageDialog(null, exchange.getBody());
 
     }
 
@@ -37,7 +39,7 @@ public class RestService {
         ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
 
 
-        System.out.println(exchange.getBody());
+        JOptionPane.showMessageDialog(null, exchange.getBody());
 
     }
 
@@ -50,7 +52,7 @@ public class RestService {
         ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, request, String.class);
 
 
-        System.out.println(exchange.getBody());
+        JOptionPane.showMessageDialog(null, exchange.getBody());
 
     }
 
@@ -63,13 +65,13 @@ public class RestService {
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         httpHeaders.add("userdetail", headerValue);
 
-        HttpEntity<String> entity = new HttpEntity<>(headerValue,httpHeaders);
+        HttpEntity<String> entity = new HttpEntity<>(headerValue, httpHeaders);
 
         String url = "http://localhost:1010/loginUserDetails";
         ResponseEntity<Response> exchange = restTemplate.exchange(url, HttpMethod.GET, entity, Response.class);
 
 
-        System.out.println(exchange.getBody().getMessage());
+        JOptionPane.showMessageDialog(null, exchange.getBody().getMessage());
 
     }
 }
