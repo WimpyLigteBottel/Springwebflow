@@ -4,14 +4,13 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
-        <link rel="stylesheet" href="/WEB-INF/resources/styles.css">
+         <link href="/resources/style.css" rel="stylesheet" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>Hello world Example</title>
     </head>
     <body>
-        <div>
-            <c:out value="new value"/>
-            Hellos
+        <div style="color:red;">
+            Hello world!
         </div>
     </body>
 </html>
