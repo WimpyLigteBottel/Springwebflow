@@ -4,8 +4,8 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
-         <link href="/resources/style.css" rel="stylesheet" >
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <link href="/resources/css/style.css" rel="stylesheet" >
+        <script src="/resources/js/3.3.1-jquery-min.js"></script>
         <title>Hello world Example</title>
     </head>
     <body>
