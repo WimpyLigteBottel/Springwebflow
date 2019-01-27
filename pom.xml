@@ -7,6 +7,7 @@
     <groupId>nel-marco</groupId>
     <artifactId>marco-springboot-webflow</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -43,9 +44,16 @@
         </dependency>
 
 
+        <!-- JSTL for JSP -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
+        <!-- Need this to compile JSP -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
+            <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
 
 
