@@ -12,6 +12,7 @@ public class RedirectController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public void redirect(HttpServletResponse response) throws IOException {
+        System.out.println("HELLO WORLD!");
         response.sendRedirect("/helloWorldFlow");
     }
 }
