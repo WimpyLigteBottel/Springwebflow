@@ -15,6 +15,10 @@
                      welcome ${name}
                    </div>
                    <br/>
+                    <div>
+                     ${result}
+                   </div>
+                   <br/>
                    <div>
                    <input type="submit" name="_eventId_back" value="Back"/>
                    </div>

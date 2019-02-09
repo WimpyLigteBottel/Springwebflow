@@ -18,8 +18,6 @@
             <div>
             <input type="submit" name="_eventId_welcome"value="OK" />
             </div>
-
-
     </form>
 
     </body>

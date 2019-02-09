@@ -12,6 +12,9 @@
     </view-state>
 
     <view-state id="welcome" view="/WEB-INF/jsp/welcome.jsp">
+        <on-entry>
+            <evaluate expression="welcomeAction.doSomethingAwesome(name)" result="viewScope.result"/>
+        </on-entry>
         <transition on="back" to="mainPage"/>
     </view-state>
 
