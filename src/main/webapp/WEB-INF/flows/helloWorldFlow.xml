@@ -6,6 +6,13 @@
 
 
     <view-state id="mainPage" view="/WEB-INF/jsp/mainPage.jsp">
+        <transition on="welcome" to="welcome">
+            <set name="flowScope.name" value="requestParameters.name"/>
+        </transition>
+    </view-state>
+
+    <view-state id="welcome" view="/WEB-INF/jsp/welcome.jsp">
+        <transition on="back" to="mainPage"/>
     </view-state>
 
 </flow>

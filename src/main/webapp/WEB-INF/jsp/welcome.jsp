@@ -9,29 +9,20 @@
         <title>Hello world Example</title>
     </head>
     <body>
-    <form name="welcomeForm"  method="POST" action="${flowExecutionUrl}">
+        <form name="welcomeForm"  method="POST" action="${flowExecutionUrl}">
 
-            <div>
-              Person Name: <input type="text" name="name"/>
-            </div>
-            <br/>
-            <div>
-            <input type="submit" name="_eventId_welcome"value="OK" />
-            </div>
+                   <div>
+                     welcome ${name}
+                   </div>
+                   <br/>
+                   <div>
+                   <input type="submit" name="_eventId_back" value="Back"/>
+                   </div>
 
-
-    </form>
-
+           </form>
     </body>
 </html>
 <script>
-
-
-function submit(){
-
-$("welcomeForm").submit();
-
-}
 
 $( document ).ready(function() {
     console.log( "ready!" );
