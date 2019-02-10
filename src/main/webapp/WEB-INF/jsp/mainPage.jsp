@@ -6,16 +6,14 @@
 </head>
 <body>
 <form id="welcomeForm" name="welcomeForm" method="POST" action="${flowExecutionUrl}">
-
-    <div>
+    <div class="middle">
+        <br/><br/>
         Person Name: <input type="text" name="name"/>
-    </div>
-    <br/>
-    <div>
+        <br/><br/>
         <input type="submit" name="_eventId_welcome" value="submit"/>
     </div>
-</form>
 
+</form>
 </body>
 </html>
 <script>
