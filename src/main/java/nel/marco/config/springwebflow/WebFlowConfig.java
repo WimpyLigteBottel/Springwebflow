@@ -9,19 +9,15 @@ import org.springframework.webflow.executor.FlowExecutor;
 @Configuration
 public class WebFlowConfig extends AbstractFlowConfiguration {
 
-    @Bean
-    public FlowDefinitionRegistry flowRegistry() {
-        return getFlowDefinitionRegistryBuilder()
-                .addFlowLocationPattern("/WEB-INF/flows/*Flow.xml")
-                .build();
-    }
+  @Bean
+  public FlowDefinitionRegistry flowRegistry() {
+    return getFlowDefinitionRegistryBuilder()
+        .addFlowLocationPattern("/WEB-INF/flows/*Flow.xml")
+        .build();
+  }
 
-    @Bean
-    public FlowExecutor flowExecutor() {
-        return getFlowExecutorBuilder(flowRegistry())
-                .build();
-    }
-
-
-
+  @Bean
+  public FlowExecutor flowExecutor() {
+    return getFlowExecutorBuilder(flowRegistry()).build();
+  }
 }

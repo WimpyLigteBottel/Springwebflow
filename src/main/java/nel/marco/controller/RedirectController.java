@@ -9,8 +9,8 @@ import java.io.IOException;
 @RestController
 public class RedirectController {
 
-    @GetMapping(value = "/")
-    public void redirect(HttpServletResponse response) throws IOException {
-        response.sendRedirect("/helloWorldFlow");
-    }
+  @GetMapping(value = "/")
+  public void redirect(HttpServletResponse response) throws IOException {
+    response.sendRedirect("/helloWorldFlow");
+  }
 }
